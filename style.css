@@ -1,41 +1,79 @@
+:root {
+    --accent-color:#3C1446;
+}
+
+
 body {
-    font-family: "Arial", sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-    color: #333;
+  font-family: "Verdana ", sans-serif;
+  margin: 0;
+
+  padding: 0;
+
+  background-color: #f8f8f8;
+
+  color: #333;
 }
 
 header {
-    background-color: #4285f4;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
+  background-color: var(--accent-color);
+
+  color: #fff;
+
+  text-align: center;
+
+  padding: 20px;
 }
 
 .about,
-.courses,
+.hobbies,
 .contact {
-    margin: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+
+  padding: 20px;
+
+  background-color: #fff;
+
+  border-radius: 8px;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hobbies-flex {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.hobbies-flex table {
+  flex: 1;
+}
+
+.hobbies-flex img {
+  align-self: stretch;   /* explicitly stretch to match table's height */
+  width: auto;
+  max-width: 300px;      /* optional: caps how wide it can get */
+  object-fit: cover;     /* crops instead of distorting */
+  border-radius: 8px;
+  margin-left: 100px;
 }
 
 h2 {
-    color: #4285f4;
+  color: var(--accent-color);
 }
 
 ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: circle;
 }
 
+
 li {
-    margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+li:last-child {
+    margin-bottom: 0;
 }
 
 address {
-    font-style: normal;
+  font-style: normal;
 }
