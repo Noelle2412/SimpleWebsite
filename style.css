@@ -1,5 +1,5 @@
 :root {
-    --accent-color:#3C1446;
+  --accent-color: #3C1446;
 }
 
 
@@ -44,17 +44,31 @@ header {
   gap: 20px;
 }
 
-.hobbies-flex table {
-  flex: 1;
-}
-
 .hobbies-flex img {
-  align-self: stretch;   /* explicitly stretch to match table's height */
+  align-self: stretch;
+  /* explicitly stretch to match table's height */
   width: auto;
-  max-width: 300px;      /* optional: caps how wide it can get */
-  object-fit: cover;     /* crops instead of distorting */
+  max-width: 300px;
+  /* optional: caps how wide it can get */
+  object-fit: cover;
+  /* crops instead of distorting */
   border-radius: 8px;
   margin-left: 100px;
+}
+
+@media (max-width: 650px) {
+  .hobbies-flex {
+    flex-direction: column;
+  }
+
+  .hobbies-flex img {
+    margin-left: 0;
+    /* the 100px left margin only makes sense side-by-side */
+    max-width: 100%;
+    /* let it use the full width of its container instead of 300px */
+    align-self: center;
+    /* stretch doesn't make sense in a column layout */
+  }
 }
 
 h2 {
@@ -70,8 +84,9 @@ li {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
 li:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 address {
